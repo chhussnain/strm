@@ -6,7 +6,7 @@ def main():
     st.title("Web Scraper Demo")
 
     # Make a GET request to the website
-    url = "http://books.toscrape.com/"  # Replace with the URL of the website you want to scrape
+    url = "http://quotes.toscrape.com/"  # Replace with the URL of the website you want to scrape
     response = requests.get(url)
 
     # Extract the links using regular expressions
