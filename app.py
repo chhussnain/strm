@@ -6,7 +6,7 @@ def main():
     st.title("Web Scraper Demo")
 
     # Make a GET request to the website
-    url = "https://www.amazon.com/"  # Replace with the URL of the website you want to scrape
+    url = " https://news.ycombinator.com/"  # Replace with the URL of the website you want to scrape
     response = requests.get(url)
 
     # Extract the links using regular expressions
