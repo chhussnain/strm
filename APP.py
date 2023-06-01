@@ -19,13 +19,11 @@ def main():
         # Find all the input fields in the HTML
         input_fields = soup.find_all("input")
 
-        # Display the extracted input fields in Streamlit
+        # Display the extracted aria-label attributes in Streamlit
         for input_field in input_fields:
-            input_name = input_field.get("name")
-            input_type = input_field.get("type")
-            st.write("Name:", input_name)
-            st.write("Type:", input_type)
-            st.write("-----")
+            aria_label = input_field.get("aria-label")
+            if aria_label:
+                st.write("aria-label:", aria_label)
 
 if __name__ == '__main__':
     main()
