@@ -3,20 +3,20 @@ import requests
 import re
 
 def main():
-    st.title(" My Web Scraper")
+    st.title("Movie Title Scraper")
 
     # Get the URL from the user
-    url = st.text_input("Enter the URL", "https://quotes.toscrape.com/")
+    url = st.text_input("Enter the URL", "https://example.com/movies")
 
     # Make a GET request to the website
     response = requests.get(url)
 
-    # Extract the links using regular expressions
-    links = re.findall(r'<a\s+href=[\'"]?([^\'" >]+)', response.text)
+    # Extract the movie titles using regular expressions
+    movie_titles = re.findall(r'<h2>(.*?)</h2>', response.text)
 
-    # Display the extracted links in Streamlit
-    for link in links:
-        st.write(link)
+    # Display the extracted movie titles in Streamlit
+    for title in movie_titles:
+        st.write(title)
 
 if __name__ == '__main__':
     main()
