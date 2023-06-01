@@ -5,8 +5,10 @@ import re
 def main():
     st.title(" My Web Scraper")
 
+    # Get the URL from the user
+    url = st.text_input("Enter the URL", "https://quotes.toscrape.com/")
+
     # Make a GET request to the website
-    url = "https://quotes.toscrape.com/"  # Replace with the URL of the website you want to scrape
     response = requests.get(url)
 
     # Extract the links using regular expressions
