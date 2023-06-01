@@ -3,7 +3,7 @@ import requests
 import re
 
 def main():
-    st.title("Web Scraper Demo")
+    st.title(" My Web Scraper")
 
     # Make a GET request to the website
     url = "https://quotes.toscrape.com/"  # Replace with the URL of the website you want to scrape
