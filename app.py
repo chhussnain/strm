@@ -6,7 +6,7 @@ def main():
     st.title("Movie Title Scraper")
 
     # Set the URL
-    url = "https://www.imdb.com/chart/top"
+    url = "https://letterboxd.com/"
 
     # Make a GET request to the website
     response = requests.get(url)
