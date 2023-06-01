@@ -13,12 +13,12 @@ def main():
         # Make a GET request to the website
         response = requests.get(url)
 
-        # Extract the button elements using regular expressions
-        buttons = re.findall(r'<button[^>]*>(.*?)</button>', response.text, re.IGNORECASE)
+        # Extract the class attributes using regular expressions
+        classes = re.findall(r'class=["\']([^"\']*)', response.text)
 
-        # Display the extracted buttons in Streamlit
-        for button in buttons:
-            st.write(button)
+        # Display the extracted classes in Streamlit
+        for class_name in classes:
+            st.write(class_name)
 
 if __name__ == '__main__':
     main()
