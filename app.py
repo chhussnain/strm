@@ -6,7 +6,7 @@ def main():
     st.title("Movie Title Scraper")
 
     # Get the URL from the user
-    url = st.text_input("Enter the URL", "https://www.imdb.com/chart/top")
+    url = st.text_input("Enter the URL")
 
     # Make a GET request to the website
     response = requests.get(url)
