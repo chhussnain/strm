@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 def main():
     st.title("Movie Title Scraper")
 
-    # Get the URL from the user
-    url = st.text_input("Enter the URL","https://letterboxd.com/")
+    # Set the URL
+    url = "https://www.imdb.com/chart/top"
 
     # Make a GET request to the website
     response = requests.get(url)
